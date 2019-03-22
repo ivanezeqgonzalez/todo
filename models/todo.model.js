@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-mongoose.connect('mongodb://localhost/todo');
+mongoose.connect(process.env.MONGO_URI);
 
 const TodoSchema = new mongoose.Schema({
     id: mongoose.Types.ObjectId,
