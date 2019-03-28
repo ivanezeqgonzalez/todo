@@ -1,11 +1,12 @@
 {
-  "name": "stockcontrol",
+  "name": "todo",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js --exec babel-node --"
+    "start": "nodemon --exec babel-node src/server.js",
+    "build": "babel src --out-dir build/release",
+    "serve": "node build/release/server.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +17,12 @@
     "express": "^4.16.4",
     "mongodb": "^3.1.13",
     "mongoose": "^5.4.19"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-rc.1",
+    "@babel/core": "^7.0.0-rc.1",
+    "@babel/node": "^7.0.0-rc.1",
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "nodemon": "^1.18.3"
   }
 }
